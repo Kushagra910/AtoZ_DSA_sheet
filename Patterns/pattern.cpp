@@ -182,6 +182,64 @@ void print16(int n){
     }
 }
 
+void print17(int n){
+  for(int i = 1;i<=n;i++) {
+    for(int j = 1;j<=n-i;j++){
+      cout << " ";
+    }
+    char ch = 'A';
+    int breakpoint = (2*i+1)/2;
+    for(int k = 1;k<=2*i-1;k++){
+      cout << ch;
+      if(k<breakpoint) ch++;
+      else ch--;
+    }
+    cout << endl;
+  }
+
+}
+
+void print18(int n) {
+    for(int i = 0;i<n;i++){
+        for(char ch ='E'-i;ch<='E';ch++){
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+
+void print19(int n){
+    int iniS=0;
+    for(int i=0;i<n;i++){
+        for(int j=1;j<=n-i;j++){
+            cout << "*";
+        }
+        for(int j=0;j<iniS;j++){
+            cout << " ";
+        }
+         for(int j=1;j<=n-i;j++){
+            cout << "*";
+        }
+        iniS+=2;
+        cout<<endl;
+    }
+    iniS=2*n-2;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            cout << "*";
+        }
+        for(int j=0;j<iniS;j++){
+            cout << " ";
+        }
+         for(int j=1;j<=i;j++){
+            cout << "*";
+        }
+        iniS-=2;
+        cout<<endl;
+    }
+
+}
 
 int main() {
   int t;
@@ -189,7 +247,7 @@ int main() {
   for(int i = 0;i<t;i++){
     int n;
     cin >> n;
-    print16(n);
+    print19(n);
   }
   return 0;
 }
